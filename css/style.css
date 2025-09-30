@@ -1,0 +1,281 @@
+ body {
+            background-color: #0f0f0f; /* Dark background for dark mode */
+            color: #f1f1f1;
+        }
+
+        /* Header Styles FlexBox */
+        .header {
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space between left, center, and right sections */
+            align-items: center; /* Vertically center items */
+            padding: 0 16px;
+            height: 56px;
+            background-color: #0f0f0f;
+            position: fixed; /* Fix the header at the top */
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000; /* Ensure header is above other content */
+            border-bottom: 1px solid #272727;
+        }
+
+        .header-left { /* Left section for logo and menu icon */
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Vertically center items */
+            gap: 16px;
+        }
+
+        .header-center { /* Center section for search bar */
+            display: flex;
+            align-items: center; /* Vertically center items */
+            flex: 0 1 728px; /* Allow to grow and shrink */ 
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .header-right {
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Vertically center items */
+            gap: 16px;
+        }
+
+        .logo { /* Logo styles */
+            display: flex;
+            align-items: center; /* Vertically center items */
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .menu-icon, .search-icon, .voice-search, .create-icon, .notifications-icon { /* Icon styles */
+            padding: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .menu-icon:hover, .search-icon:hover, .voice-search:hover, 
+        .create-icon:hover, .notifications-icon:hover { /* Hover effect for icons */
+            background-color: #272727;
+        }
+
+        .search-container { /* Search bar container */
+            display: flex; /* Use flexbox for layout */
+            flex: 1;
+            height: 40px;
+        }
+
+        .search-input { /* Search input styles */
+            flex: 1; /* Take up remaining space */
+            padding: 0 16px;
+            background-color: #121212;
+            border: 1px solid #303030;
+            border-radius: 20px 0 0 20px;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .search-button { /* Search button styles */
+            width: 64px; /* Fixed width for search button */
+            background-color: #303030;
+            border: 1px solid #303030;
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+        }
+
+        .user-avatar { /* User avatar styles */
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #ff0000;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* Main Layout */
+        .container { /* Container for sidebar and main content */
+            display: flex;
+            margin-top: 56px;
+        }
+
+        /* Sidebar Styles */
+        .sidebar { 
+            width: 240px;
+            background-color: #0f0f0f;
+            position: fixed;
+            top: 56px;
+            left: 0;
+            bottom: 0;
+            overflow-y: auto; /* Enable vertical scrolling */
+            padding: 12px 0;
+        }
+
+        .sidebar-section { /* Sidebar section styles */
+            padding: 8px 0;
+            border-bottom: 1px solid #272727;
+        }
+
+        .sidebar-item { /* Sidebar item styles */
+            display: flex;
+            align-items: center;
+            padding: 10px 24px;
+            cursor: pointer;
+            gap: 24px;
+        }
+
+        .sidebar-item:hover { /* Hover effect for sidebar items */
+            background-color: #272727;
+            border-radius: 10px;
+        }
+
+        .sidebar-item.active { /* Active sidebar item styles */
+            background-color: #272727;
+            border-radius: 10px;
+        }
+
+        .sidebar-icon { /* Sidebar icon styles */
+            width: 24px;
+            height: 24px;
+        }
+
+        .sidebar-text { /* Sidebar text styles */
+            font-size: 14px;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: 240px;
+            padding: 20px;
+        }
+
+        .categories { /* Category chips container */
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .category-chip { /* Individual category chip styles */
+            padding: 8px 12px;
+            background-color: #272727;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .category-chip.active { /* Active category chip styles */
+            background-color: #f1f1f1;
+            color: #0f0f0f;
+        }
+
+        .category-chip:hover { /* Hover effect for category chips */
+            background-color: #3d3d3d;
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+            gap: 20px;
+        }
+
+        .video-card {
+            cursor: pointer;
+        }
+
+        .thumbnail { /* Video thumbnail styles */
+            position: relative; /* For positioning duration */
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #272727;
+            margin-bottom: 12px;
+        }
+
+        .thumbnail img { /* Ensure thumbnail image covers the container */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .duration { /* Video duration styles */
+            position: absolute; /* Position at bottom-right */
+            bottom: 8px;
+            right: 8px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .video-info { /* Video info container */
+            display: flex;
+            gap: 12px;
+        }
+
+        .channel-avatar { /* Channel avatar styles */
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #ff0000;
+            flex-shrink: 0;
+        }
+
+        .video-details { /* Video details container */
+            flex: 1;
+        }
+
+        .video-title { /* Video title styles */
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 4px;
+            display: -webkit-box; /* For truncating text */
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .channel-name { /* Channel name styles */
+            font-size: 14px; 
+            color: #aaa;
+            margin-bottom: 2px;
+        }
+
+        .video-meta { /* Video metadata styles */
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .sidebar { /* Reduce sidebar width */
+                width: 72px;
+            }
+            .main-content { /* Adjust main content margin */
+                margin-left: 72px;
+            }
+            .sidebar-text { /* Hide sidebar text */
+                display: none;
+            }
+            .sidebar-item { /* Center icons in sidebar */
+                justify-content: center;
+                padding: 16px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .video-grid { /* Adjust video grid for smaller screens */
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Smaller min width */
+            }
+            .header-center { /* Adjust header center for smaller screens */
+                flex: 1;
+                margin: 0 16px;
+            }
+        }
