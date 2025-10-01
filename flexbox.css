@@ -1,0 +1,300 @@
+/* FlexBox Container Styles */
+.flex-container {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+/* FlexBox Alignment */
+.flex-justify-start {
+    justify-content: flex-start;
+}
+
+.flex-justify-end {
+    justify-content: flex-end;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-justify-between {
+    justify-content: space-between;
+}
+
+.flex-justify-around {
+    justify-content: space-around;
+}
+
+.flex-justify-evenly {
+    justify-content: space-evenly;
+}
+
+.flex-align-start {
+    align-items: flex-start;
+}
+
+.flex-align-end {
+    align-items: flex-end;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-align-stretch {
+    align-items: stretch;
+}
+
+.flex-align-baseline {
+    align-items: baseline;
+}
+
+/* FlexBox Items */
+.flex-item {
+    flex: 1;
+}
+
+.flex-item-auto {
+    flex: 0 0 auto;
+}
+
+.flex-item-grow {
+    flex-grow: 1;
+}
+
+.flex-item-shrink {
+    flex-shrink: 1;
+}
+
+.flex-item-noshrink {
+    flex-shrink: 0;
+}
+
+.flex-item-initial {
+    flex: 0 1 auto;
+}
+
+.flex-item-none {
+    flex: none;
+}
+
+/* FlexBox Order */
+.flex-order-first {
+    order: -1;
+}
+
+.flex-order-last {
+    order: 999;
+}
+
+.flex-order-1 { order: 1; }
+.flex-order-2 { order: 2; }
+.flex-order-3 { order: 3; }
+.flex-order-4 { order: 4; }
+.flex-order-5 { order: 5; }
+
+/* FlexBox Gap */
+.flex-gap-xs { gap: 4px; }
+.flex-gap-sm { gap: 8px; }
+.flex-gap-md { gap: 16px; }
+.flex-gap-lg { gap: 24px; }
+.flex-gap-xl { gap: 32px; }
+
+/* Specific Component FlexBox Styles */
+/* Header FlexBox */
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.header-left-flex {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    gap: 16px;
+}
+
+.header-center-flex {
+    display: flex;
+    align-items: center;
+    flex: 0 1 728px;
+    max-width: 640px;
+    margin: 0 auto;
+    gap: 16px;
+}
+
+.header-right-flex {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    gap: 16px;
+}
+
+/* Search Container FlexBox */
+.search-container-flex {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+}
+
+.search-input-flex {
+    flex: 1;
+    min-width: 0;
+}
+
+.search-button-flex {
+    flex: 0 0 64px;
+}
+
+/* Main Layout FlexBox */
+.main-layout-flex {
+    display: flex;
+    min-height: calc(100vh - 56px);
+}
+
+.sidebar-flex {
+    flex: 0 0 240px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content-flex {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* Categories FlexBox */
+.categories-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 12px;
+    flex: 0 0 auto;
+}
+
+.category-chip-flex {
+    flex: 0 0 auto;
+}
+
+/* Video Grid FlexBox */
+.video-grid-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.video-card-flex {
+    flex: 1 1 300px;
+    max-width: 400px;
+    min-width: 250px;
+}
+
+/* Video Info FlexBox */
+.video-info-flex {
+    display: flex;
+    gap: 12px;
+}
+
+.video-details-flex {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Sidebar Navigation FlexBox */
+.sidebar-section-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-item-flex {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Thumbnail Container FlexBox */
+.thumbnail-container-flex {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+/* Responsive FlexBox */
+@media (max-width: 1200px) {
+    .sidebar-flex {
+        flex: 0 0 72px;
+    }
+    
+    .video-card-flex {
+        flex: 1 1 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-center-flex {
+        flex: 1;
+        margin: 0 16px;
+    }
+    
+    .video-card-flex {
+        flex: 1 1 250px;
+    }
+    
+    .categories-flex {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-grid-flex {
+        flex-direction: column;
+    }
+    
+    .video-card-flex {
+        flex: 1 1 auto;
+        max-width: none;
+    }
+    
+    .sidebar-flex {
+        flex: 0 0 0;
+    }
+}
+
+/* FlexBox Utilities */
+.flex-self-start { align-self: flex-start; }
+.flex-self-end { align-self: flex-end; }
+.flex-self-center { align-self: center; }
+.flex-self-stretch { align-self: stretch; }
+.flex-self-baseline { align-self: baseline; }
+
+.flex-basis-auto { flex-basis: auto; }
+.flex-basis-0 { flex-basis: 0; }
+.flex-basis-25 { flex-basis: 25%; }
+.flex-basis-50 { flex-basis: 50%; }
+.flex-basis-75 { flex-basis: 75%; }
+.flex-basis-100 { flex-basis: 100%; }
+
+/* FlexBox Display */
+.flex-display-none { display: none; }
+.flex-display-block { display: block; }
+.flex-display-inline { display: inline; }
+.flex-display-inline-flex { display: inline-flex; }
