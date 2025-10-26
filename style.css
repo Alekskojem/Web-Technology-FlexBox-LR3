@@ -131,8 +131,10 @@ body {
 }
 
 .sidebar-text {
+    
     font-size: 14px;
     white-space: nowrap;
+    
 }
 
 .channel-avatar-small {
@@ -174,7 +176,7 @@ body {
 }
 
 .category-chip.active {
-    background-color: #f1f1f1;
+    background-color: #f71111;
     color: #0f0f0f;
 }
 
