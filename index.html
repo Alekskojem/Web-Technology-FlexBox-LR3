@@ -3,45 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyTube</title>
-    <link> rel="stylesheet" href="../css/style.css" /> /*CSS For MyTube Загальні стилі */
-    
-    
+    <title>YouTube - FlexBox Version</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="flexbox.css">
 </head>
 <body>
-    <header>
-        <div class="logo">MyTube</div> /*Kод для логотипу сайту*/
-        <nav>
-            <a href="#">Головна</a> /*Навігаційні посилання*/
-            <a href="#">Тренди</a> 
-            <a href="#">Підписки</a>
-            <a href="#">Бібліотека</a>
-        </nav>
-    </header>
-    <main>
-        <div class="container"> /*Контейнер для відео карток*/
-            <div class="video-card">
-                <img class="video-thumb" src="https://via.placeholder.com/320x180?text=Video+1" alt="Video 1">
-                <div class="video-info">
-                    <div class="video-title">Відео 1: FlexBox Основи</div>
-                    <div class="video-meta">1 тиждень тому • 1,2 тис. переглядів</div>
-                </div>
-            </div>
-            <div class="video-card"> /*Відео картка 2*/
-                <img class="video-thumb" src="https://via.placeholder.com/320x180?text=Video+2" alt="Video 2">
-                <div class="video-info">
-                    <div class="video-title">Відео 2: Сучасний HTML</div>
-                    <div class="video-meta">3 дні тому • 800 переглядів</div>
-                </div>
-            </div>
-            <div class="video-card">/*Відео картка 3*/
-                <img class="video-thumb" src="https://via.placeholder.com/320x180?text=Video+3" alt="Video 3">
-                <div class="video-info">
-                    <div class="video-title">Відео 3: CSS для початківців</div> /*Назва відео*/
-                    <div class="video-meta">2 години тому • 350 переглядів</div>
-                </div>
+    <!-- Header -->
+    <header class="header header-flex">
+        <div class="header-left-flex">
+            <div class="menu-icon flex-item-auto">☰</div>
+            <div class="logo flex-item-auto">
+                <span style="color: #ff0000;">You</span>Tube
             </div>
         </div>
-    </main>
+        
+        <div class="header-center-flex">
+            <div class="search-container-flex">
+                <input type="text" class="search-input search-input-flex" placeholder="Пошук">
+                <button class="search-button search-button-flex">🔍</button>
+            </div>
+            <div class="voice-search flex-item-auto">🎤</div>
+        </div>
+        
+        <div class="header-right-flex">
+            <div class="create-icon flex-item-auto">➕</div>
+            <div class="notifications-icon flex-item-auto">🔔</div>
+            <div class="user-avatar flex-align-center flex-justify-center">U</div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container main-layout-flex">
+        <!-- Sidebar -->
+        <nav class="sidebar sidebar-flex">
+            <div class="sidebar-section sidebar-section-flex">
+                <div class="sidebar-item sidebar-item-flex active">
+                    <div class="sidebar-icon flex-item-auto">🏠</div>
+                    <span class="sidebar-text flex-item">Головна</span>
+                </div>
+                <div class="sidebar-item sidebar-item-flex">
+                    <div class="sidebar-icon flex-item-auto">📺</div>
+                    <span class="sidebar-text flex-item">Shorts</span>
+                </div>
+                <div class="sidebar-item sidebar-item-flex">
+                    <div class="sidebar-icon flex-item-auto">📜</div>
+                    <span class="sidebar-text flex-item">Підписки</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-section sidebar-section-flex">
+                <div class="sidebar-item sidebar-item-flex">
+                    <div class="sidebar-icon flex-item-auto">📚</div>
+                    <span class="sidebar-text flex-item">Бібліотека</span>
+                </div>
+                <div class="sidebar-item sidebar-item-flex">
+                    <div class="sidebar-icon flex-item-auto">🕒</div>
+                    <span class="sidebar-text flex-item">Історія</span>
+                </div>
+                <div class="sidebar-item sidebar-item-flex">
+                    <div class="sidebar-icon flex-item-auto">▶️</div>
+                    <span class="sidebar-text flex-item">Ваші відео</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section sidebar-section-flex">
+                <div class="sidebar-section-title">Підписки</div>
+                <div class="sidebar-item sidebar-item-flex">
+                    <div class="channel-avatar-small flex-item-auto flex-align-center flex-justify-center" style="background: #ff6b6b;">A</div>
+                    <span class="sidebar-text flex-item">Web Development</span>
+                </div>
+                <div class="sidebar-item sidebar-item-flex">
+                    <div class="channel-avatar-small flex-item-auto flex-align-center flex-justify-center" style="background: #4ecdc4;">B</div>
+                    <span class="sidebar-text flex-item">CSS Masters</span>
+                </div>
+                <div class="sidebar-item sidebar-item-flex">
+                    <div class="channel-avatar-small flex-item-auto flex-align-center flex-justify-center" style="background: #6c5ce7;">C</div>
+                    <span class="sidebar-text flex-item">JS Simplified</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content main-content-flex">
+            <!-- Categories -->
+            <div class="categories categories-flex">
+                <div class="category-chip category-chip-flex active">Усі</div>
+                <div class="category-chip category-chip-flex">Музика</div>
+                <div class="category-chip category-chip-flex">Геймінг</div>
+                <div class="category-chip category-chip-flex">Наживо</div>
+                <div class="category-chip category-chip-flex">Спорт</div>
+                <div class="category-chip category-chip-flex">Новини</div>
+                <div class="category-chip category-chip-flex">Навчання</div>
+                <div class="category-chip category-chip-flex">Подкасти</div>
+            </div>
+
+            <!-- Video Grid -->
+            <div class="video-grid video-grid-flex">
+                <!-- Video Cards -->
+                <div class="video-card video-card-flex">
+                    <div class="thumbnail thumbnail-container-flex">
+                        <div class="thumbnail-placeholder gradient-1"></div>
+                        <div class="duration">10:25</div>
+                    </div>
+                    <div class="video-info video-info-flex">
+                        <div class="channel-avatar flex-item-auto flex-align-center flex-justify-center" style="background: #ff6b6b;">A</div>
+                        <div class="video-details video-details-flex">
+                            <div class="video-title">Як створити сучасний веб-сайт з використанням FlexBox</div>
+                            <div class="channel-name">Web Development</div>
+                            <div class="video-meta">125 тис. переглядів • 2 дні тому</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card video-card-flex">
+                    <div class="thumbnail thumbnail-container-flex">
+                        <div class="thumbnail-placeholder gradient-2"></div>
+                        <div class="duration">15:42</div>
+                    </div>
+                    <div class="video-info video-info-flex">
+                        <div class="channel-avatar flex-item-auto flex-align-center flex-justify-center" style="background: #4ecdc4;">B</div>
+                        <div class="video-details video-details-flex">
+                            <div class="video-title">CSS Grid vs FlexBox - Що вибрати у 2024?</div>
+                            <div class="channel-name">CSS Masters</div>
+                            <div class="video-meta">89 тис. переглядів • 1 тиждень тому</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Додаткові відео картки... -->
+            </div>
+        </main>
+    </div>
 </body>
-</html></div>
+</html>
